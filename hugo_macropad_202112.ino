@@ -219,9 +219,9 @@ void loop()
           break; 
                  
           case 9:SoundOut(900,50,1,1);   
-                 OLED_Text("9",25,24);
+                 OLED_Text("closing vim",25,24);
                  pixels.setPixelColor(8,0xff0000);  
-                 ASCII_Output(0x39);  
+                 closeVim();
           break;
                   
           case 10:SoundOut(1000,50,1,1);   
@@ -465,10 +465,16 @@ void hateWords()
 }
 
 void kerbal() {
-  const char* output = "RTZ ";
-  const unsigned output_len = sizeof(output) / sizeof(output[0]);
-  for (int i=0; i < output_len; i++) {
-    ASCII_Output(output[i]);
+  ASCII_Output("RTZ ");
+}
+
+void closeVim() {
+  ASCII_Output(":qa!\n");
+}
+
+void ASCII_Output(String str) {
+  for (int i=0; i < str.length(); i++) {
+    ASCII_Output(str[i]);
   }
 }
 
