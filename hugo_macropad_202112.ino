@@ -220,14 +220,14 @@ void loop()
                  
           case 9:SoundOut(900,50,1,1);   
                  OLED_Text("closing vim",25,24);
-                 pixels.setPixelColor(8,0xff0000);  
+                 pixels.setPixelColor(8,0x00ff00);  
                  closeVim();
           break;
                   
           case 10:SoundOut(1000,50,1,1);   
                   OLED_Text("10",25,24);
-                  pixels.setPixelColor(9,0xff0000); 
-                  ASCII_Output(0x01);    
+                  pixels.setPixelColor(9,0x00ffff); 
+                  fibonacciPython();
           break; 
                  
           case 11:SoundOut(1300,50,1,1);  
@@ -470,6 +470,10 @@ void kerbal() {
 
 void closeVim() {
   ASCII_Output(":qa!\n");
+}
+
+void fibonacciPython() {
+  ASCII_Output("golden_ratio = (1 + 5 ** 0.5) * 0.5 ; fib = lambda i: round(golden_ratio ** i / 5 ** 0.5)");
 }
 
 void ASCII_Output(String str) {
