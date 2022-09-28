@@ -209,7 +209,7 @@ void loop()
           case 7:SoundOut(700,50,1,1);   
                  OLED_Text("7",25,24);
                  pixels.setPixelColor(6,0xff0000); 
-                 ASCII_Output(0x37);   
+                 ASCII_Output("GIVE ME A SEVEN!");
           break; 
                   
           case 8:SoundOut(800,50,1,1);
@@ -395,20 +395,7 @@ void hateWords()
 {
   switch (1)
   {
-    case 1: ASCII_Output(0x4D);//M
-            ASCII_Output(0x4F);//O
-            ASCII_Output(0x4E);//N
-            ASCII_Output(0x4B);//K
-            ASCII_Output(0x45);//E
-            ASCII_Output(0x59);//Y
-            ASCII_Output(0x20);//_
-            ASCII_Output(0x42);//B
-            ASCII_Output(0x52);//R
-            ASCII_Output(0x41);//A
-            ASCII_Output(0x49);//I
-            ASCII_Output(0x4E);//N
-            ASCII_Output(0x21);//!
-            ASCII_Output(0x20);//_ 
+    case 1: ASCII_Output("Monkey brain!");//M
             
   
     break;
